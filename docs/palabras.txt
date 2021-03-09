@@ -1,0 +1,26 @@
+Visual Encodings
+Graphical Perceptions
+Index Charts
+Stream Graph
+Stackead Area Graph
+Small Multiples
+Horizon Graphs
+Exploratory Data Analysis
+Stem-and-leaf plot
+Q-Q Plot
+Scatter Plot Matrix
+brushing-and-linking
+Parallel Coordinates
+Flow Map
+Choropleth Map
+Graduate Symbol Map
+Cartogram
+Node-link diagram
+Adjacency Diagram
+Icicle layout
+Sunburst layout
+Treemap
+Circle Packing
+Force-directed layouts
+Arc Diagrams
+Matrix view
