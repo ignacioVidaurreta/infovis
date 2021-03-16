@@ -2,3 +2,6 @@ pandas
 matplotlib
 wordcloud
 pillow
+requests
+altair
+altair_viewer
