@@ -5,3 +5,4 @@ pillow
 requests
 altair
 altair_viewer
+python-dotenv
