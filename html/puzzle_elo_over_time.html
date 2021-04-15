@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-7cf7f2801d53af23f721294a05016bdf"}, "mark": {"type": "line", "point": true}, "encoding": {"tooltip": [{"type": "temporal", "field": "date"}, {"type": "quantitative", "field": "elo"}], "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "elo"}}, "height": 500, "selection": {"selector001": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "title": "Puzzles Elo Over Time", "width": 1000, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-7cf7f2801d53af23f721294a05016bdf": [{"date": "2020-12-31T00:00:00", "elo": 1528}, {"date": "2021-01-06T00:00:00", "elo": 1347}, {"date": "2021-01-08T00:00:00", "elo": 1150}, {"date": "2021-01-09T00:00:00", "elo": 914}, {"date": "2021-01-10T00:00:00", "elo": 1426}, {"date": "2021-01-11T00:00:00", "elo": 1165}, {"date": "2021-01-15T00:00:00", "elo": 1200}, {"date": "2021-01-16T00:00:00", "elo": 1397}, {"date": "2021-01-17T00:00:00", "elo": 1792}, {"date": "2021-01-18T00:00:00", "elo": 1233}, {"date": "2021-01-19T00:00:00", "elo": 1142}, {"date": "2021-01-20T00:00:00", "elo": 1199}, {"date": "2021-01-21T00:00:00", "elo": 1354}, {"date": "2021-01-22T00:00:00", "elo": 1507}, {"date": "2021-01-23T00:00:00", "elo": 1462}, {"date": "2021-01-24T00:00:00", "elo": 1526}, {"date": "2021-02-05T00:00:00", "elo": 1516}, {"date": "2021-02-06T00:00:00", "elo": 1431}, {"date": "2021-02-07T00:00:00", "elo": 1443}, {"date": "2021-02-19T00:00:00", "elo": 1608}, {"date": "2021-02-24T00:00:00", "elo": 1502}, {"date": "2021-02-25T00:00:00", "elo": 1683}, {"date": "2021-02-28T00:00:00", "elo": 1486}, {"date": "2021-03-01T00:00:00", "elo": 1499}, {"date": "2021-03-05T00:00:00", "elo": 1451}, {"date": "2021-03-07T00:00:00", "elo": 1441}, {"date": "2021-03-10T00:00:00", "elo": 1529}, {"date": "2021-03-11T00:00:00", "elo": 1328}, {"date": "2021-03-12T00:00:00", "elo": 1334}, {"date": "2021-03-13T00:00:00", "elo": 1481}, {"date": "2021-03-14T00:00:00", "elo": 1330}, {"date": "2021-03-15T00:00:00", "elo": 1587}, {"date": "2021-03-16T00:00:00", "elo": 1454}, {"date": "2021-03-17T00:00:00", "elo": 1504}, {"date": "2021-03-19T00:00:00", "elo": 1504}, {"date": "2021-03-20T00:00:00", "elo": 1573}, {"date": "2021-03-21T00:00:00", "elo": 1416}, {"date": "2021-03-22T00:00:00", "elo": 1303}, {"date": "2021-03-23T00:00:00", "elo": 1513}, {"date": "2021-03-24T00:00:00", "elo": 1597}, {"date": "2021-03-25T00:00:00", "elo": 1572}, {"date": "2021-03-27T00:00:00", "elo": 1544}, {"date": "2021-03-28T00:00:00", "elo": 1670}, {"date": "2021-03-29T00:00:00", "elo": 1626}, {"date": "2021-03-30T00:00:00", "elo": 1574}, {"date": "2021-03-31T00:00:00", "elo": 1394}, {"date": "2021-04-01T00:00:00", "elo": 1545}, {"date": "2021-04-02T00:00:00", "elo": 1605}, {"date": "2021-04-03T00:00:00", "elo": 1617}, {"date": "2021-04-06T00:00:00", "elo": 1752}, {"date": "2021-04-08T00:00:00", "elo": 1642}, {"date": "2021-04-10T00:00:00", "elo": 1698}, {"date": "2021-04-12T00:00:00", "elo": 1805}, {"date": "2021-04-13T00:00:00", "elo": 1647}]}};
+      var embedOpt = {"renderer": "svg", "mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
